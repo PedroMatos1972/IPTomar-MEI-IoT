@@ -1,6 +1,8 @@
 "# ImproveTomar"
-Projeto desenvolvido na cadeira Engenharia de Software 
-curso de Mestrado em Engenharia Informática - Internet das Coisas 
-no 
-Instituto Politecnico de Tomar
+
+<p>Projeto desenvolvido na cadeira Engenharia de Software </p>
+<p>Curso de Mestrado em Engenharia Informática - Internet das Coisas no </p>
+
+<img src="http://portal2.ipt.pt/img/logo.png" alt="Smiley face" height="70%" width="100%">
+
  
