@@ -1,4 +1,4 @@
-# **ImproveTomar**
+# **MEI-IoT**
 
 <p>Projeto desenvolvido na cadeira de Engenharia de Software </p>
 <p>Mestrado em Engenharia Informática - Internet das Coisas</p>
