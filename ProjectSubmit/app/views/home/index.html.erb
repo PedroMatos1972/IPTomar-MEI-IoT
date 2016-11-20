@@ -1,33 +1,237 @@
-<div>
-<!-- Navigation -->
-    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand" href="#"><%= @projectname %></a>
-            </div>
+  <!-- BEGAIN PRELOADER -->
+  <div id="preloader">
+    <div class="loader">&nbsp;</div>
+  </div>
+  <!-- END PRELOADER -->  
 
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                    <% @itemMenu.each do |item| %>
-						<li class="page-scroll">
-	                		<a href="#"><%= item %></a>
-	                	</li>
-					<% end %>  
-					<li class="page-scroll">
-                    	<div class="input-append">
-						  <input class="span3" id="appendedInputButton" type="text">
-						  <button class="btn" type="button">Go!</button>
-						</div>
-                	</li>					                  
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
+<!-- Start header section -->  
+  <header id="header">
+    <div class="header-inner">
+      <!-- Header image 
+      <img src="assets/images/header-bg.jpg" alt="img">
+      <div class="header-overlay">
+        <div class="header-content">-->
+        <!-- Start header content slider 
+        <h2 class="header-slide">WE GENERATE
+          <span>MOST CREATIVE</span>
+          <span>MOST Design</span>
+          <span>MOST Valuable</span>
+          IDEA</h2>-->
+        <!-- End header content slider -->  
+        <!-- Header btn area 
+        <div class="header-btn-area">
+          <a class="knowmore-btn" href="#">KNOW MORE</a>
+          <a class="download-btn" href="#">DOWNLOAD Theme</a>
         </div>
-        <!-- /.container-fluid -->
-    </nav>
-</div>
+      </div>
+      </div>  -->    
+    </div>
+  </header>
+  <!-- End header section -->
+
+  <!-- Start menu section -->
+  <section id="menu-area">
+    <nav class="navbar navbar-default main-navbar" role="navigation">  
+      <div class="container">
+        <div class="navbar-header">
+          <!-- FOR MOBILE VIEW COLLAPSED BUTTON -->
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- LOGO -->     
+		  <!-- Image logo  -->
+           <a class="navbar-brand logo" href="">
+           	<img src="images/projectsubmit3.jpg" alt="logo"></a> 
+           <!-- Text logo  -->
+           <!-- <a class="navbar-brand logo" href="index.html"><span><%= @projectname %></span></a>                      -->
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul id="top-menu" class="nav navbar-nav main-nav menu-scroll">
+            <% @itemMenu.each do |item| %>
+            	<li>
+            		<a href="#<%= item %>"><%= item.capitalize %></a>
+        		</li>
+            <% end %>
+          </ul>                            
+        </div><!--/.nav-collapse -->
+       <div class="search-area">
+          <form action="">
+            <input id="search" name="search" type="text" placeholder="Pesquisar">
+            <input id="search_submit" value="Rechercher" type="submit">
+          </form>
+        </div>         
+      </div>          
+    </nav> 
+  </section>
+  <!-- End menu section -->
+
+  <!-- Start inicio section -->
+  <section id="inicio">
+	
+  </section>
+  <!-- End inicio section -->
+
+  <!-- Start acerca section -->
+  <section id="acerca">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <!-- Start welcome area -->
+          <div class="welcome-area">
+            <div class="title-area">
+              <h2 class="tittle">Bem vindo ao <span><%= @projectname %></span></h2>
+              <span class="tittle-line"></span>
+              <p>Instituto Politécnico de Tomar <br> 
+              Mestrado em Engenharia Informática - Internet das Coisas</p>
+            </div>
+          </div>
+          <!-- End welcome area -->
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="about-area">
+            <div class="row">
+              <div class="col-md-5 col-sm-6 col-xs-12">
+                <div class="about-left wow fadeInLeft">
+                  <img src="images/projectsubmit4.jpg" alt="img">
+                  <!-- <a class="introduction-btn" href="#">Introduction</a> -->
+                </div>
+              </div>
+              <div class="col-md-7 col-sm-6 col-xs-12">
+                <div class="about-right wow fadeInRight">
+                  <div class="title-area">
+                    <h2 class="tittle">Acerca do <span><%= @projectname %></span></h2>
+                    <span class="tittle-line"></span>
+                    <p>Site desenvolvido na cadeira Engenharia de Software do Mestado em Engenharia Informática - Internet das Coisas no Instituto Politécnico de Tomar, com o intuito de armazenar e mostrar os vários projetos desenvolvidos nesta intituição.</p>                    
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section> 
+  <!-- End acerca section -->
+
+  <!-- Start equipa action -->
+  <section id="equipa">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="team-area">
+            <div class="title-area">
+              <h2 class="tittle">Equipa de Desenvolvimento</h2>
+              <span class="tittle-line"></span>
+              <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto</p>
+            </div>
+            <!-- Start team content -->
+            <div class="team-content">
+              <ul class="team-grid">
+	              <% @teamdev.sort.each do |team| %>
+	                <li>
+	                  <div class="team-item team-img-1 wow fadeInUp">
+	                    <div class="team-info">
+	                      <p> I must explain to you how all this mistaken idea of denouncing pleasure n</p>
+	                      <a href="#"><span class="fa fa-facebook"></span></a>
+	                      <a href="#"><span class="fa fa-twitter"></span></a>
+	                      <a href="#"><span class="fa fa-pinterest"></span></a>
+	                      <a href="#"><span class="fa fa-rss"></span></a>
+	                    </div>
+	                  </div>
+	                  <div class="team-address">
+	                    <p><%= team %></p>
+	                    <span>Developer</span>
+	                  </div>
+	                </li>
+	              <% end %>                
+              </ul>
+            </div>
+            <!-- End equipa content -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Start equipa action -->
+
+  
+  <!-- Start Portfolio section -->
+  <section id="portfolio">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="portfolio-area">
+            <div class="title-area">
+              <h2 class="tittle">Portfolio de Projetos</h2>
+              <span class="tittle-line"></span>
+              <p>Projetos desenvolvidos.</p>
+            </div>
+            <!-- Portfolio content -->
+            <div class="portfolio-content">
+               <!-- Portfolio container -->
+               <div class="portfolio-container">
+           		<% @projetosall.each do |proj| %>
+                 <div class="single-portfolio">
+                   <div class="single-item">
+                     <img src="images/portfolio-img-small1.jpg" alt="img">
+                     <div class="single-item-content">
+                        <div class="portfolio-social-icon">
+                          <a class="view-btn" href="#"><i class="fa fa-search-plus"></i>
+                          </a>
+                        </div>
+                        <div class="portfolio-title">
+                          <h4><%= proj.titulo %></h4>
+                        </div>
+                        <div class="portfolio-detail">
+	                        <a href="#" class="modal-close-btn">
+	                        	<span class="fa fa-times"></span>
+                        	</a>
+	                        <img src="images/portfolio-img-big1.jpg" alt="img-1" />
+	                        <h2><%= proj.titulo %></h2>
+	                        <p><%= proj.resume %></p>
+	                        <a href="#" class="view-project-btn">Live Demo</a>
+                        </div>
+                     </div>
+                   </div>
+                 </div>
+             	<% end %>
+               </div>      
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Portfolio section -->
+
+  <!-- Start Footer -->    
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="footer-top-area">             
+                <a class="footer-logo" href="#"><img src="images/projectsubmit3.jpg" alt="Logo"></a>              
+              <div class="footer-social">
+                <a class="facebook" href="#"><span class="fa fa-facebook"></span></a>
+                <a class="twitter" href="#"><span class="fa fa-twitter"></span></a>
+                <a class="google-plus" href="#"><span class="fa fa-google-plus"></span></a>
+                <a class="youtube" href="#"><span class="fa fa-youtube"></span></a>
+                <a class="linkedin" href="#"><span class="fa fa-linkedin"></span></a>
+                <a class="dribbble" href="#"><span class="fa fa-dribbble"></span></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>Designed by <a rel="nofollow" href="http://www.markups.io/">MarkUps.io</a></p>
+    </div>
+  </footer>
+  <!-- End Footer -->

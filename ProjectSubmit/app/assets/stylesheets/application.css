@@ -12,6 +12,11 @@
  *
  *= require_tree .
  *= require_self
- *= require bootstrap.min
- *= require freelancer.min
+ *
+ *= require font-awesome
+ *= require bootstrap
+ *= require slick
+ *= require animate
+ *= require theme-color/default
+ *= require style
  */

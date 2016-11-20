@@ -14,8 +14,10 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-//= require jquery.min
-//= require bootstrap.min
-//= require jqBootstrapValidation
-//= require contact_me
-//= require freelancer.min
+
+//= require bootstrap
+//= require slick
+//= require waypoints
+//= require jquery.counterup
+//= require wow
+//= require custom
