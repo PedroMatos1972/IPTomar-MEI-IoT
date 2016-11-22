@@ -1,6 +1,6 @@
 module ProjetosHelper
 
 	def allProjetos
-		@projetos = Projeto.all
+		projetos = Projeto.all
 	end
 end
