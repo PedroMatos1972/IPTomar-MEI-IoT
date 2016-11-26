@@ -3,7 +3,7 @@ class HomeController < ApplicationController
 
   def index
   	@projectname = 'Project Submit'
-  	@itemMenu = ["inicio", "acerca", "equipa", "portfolio"]
+  	@itemMenu = ["inicio", "acerca", "equipa", "portfolio", "login"]
   	@teamdev = ["Nelson Gomes", "Miguel Coelho", "Paulo Rodrigues", "Pedro Dias", "Pedro Matos", "Pedro Nunes", "Vasco Marques"]
 
   	@projetosall = allProjetos
