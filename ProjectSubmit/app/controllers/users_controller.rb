@@ -1,4 +1,5 @@
 class UsersController < ApplicationController
+<<<<<<< HEAD
   before_action :set_user, only: [:show, :edit, :update, :destroy]
 
   # GET /users
@@ -75,4 +76,6 @@ class UsersController < ApplicationController
     def user_params
       params.require(:user).permit(:name, :email, :telefone, :escola, :funcao, :password, :password_confirmation)
     end
+=======
+>>>>>>> origin/master
 end
