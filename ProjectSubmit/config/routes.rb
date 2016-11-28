@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   #get 'sessions/new'
   #get 'sessions/create'
   #get 'sessions/destroy'
-  get 'usres/new'
+  get 'users/new'
   get 'admin' => 'admin#index'
   controller :sessions do
     get 'login' => :new
