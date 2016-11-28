@@ -1,0 +1,2 @@
+class Utiltype < ApplicationRecord
+end
