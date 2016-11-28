@@ -1,0 +1,10 @@
+class CreateUsertypes < ActiveRecord::Migration[5.0]
+  def change
+    create_table :usertypes do |t|
+      t.integer :identification
+      t.text :description
+
+      t.timestamps
+    end
+  end
+end
