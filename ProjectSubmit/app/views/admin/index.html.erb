@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+<h1>Welcome - Admin</h1>
+<% if session[:user_id] %>
+<br>
+<h1> criar novos users </h1>
+<br>
+
+  --> It's data: <%= Time.now %>
+<br><br>
+<%= link_to "Criar users", users_path %>
+<br><br>
+<%=
+button_to 'Logout',
+logout_path, method: :delete %>
+<% end %>
+
+
+
+
+
+
+<div>
+<%= yield %>
+</div>
+</body>
+</html>
