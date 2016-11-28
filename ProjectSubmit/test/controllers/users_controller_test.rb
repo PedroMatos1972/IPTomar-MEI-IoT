@@ -2,6 +2,7 @@ require 'test_helper'
 
 class UsersControllerTest < ActionDispatch::IntegrationTest
 <<<<<<< HEAD
+<<<<<<< HEAD
   setup do
     @user = users(:one)
   end
@@ -46,6 +47,11 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
     assert_redirected_to users_url
   end
+=======
+  # test "the truth" do
+  #   assert true
+  # end
+>>>>>>> origin/master
 =======
   # test "the truth" do
   #   assert true
