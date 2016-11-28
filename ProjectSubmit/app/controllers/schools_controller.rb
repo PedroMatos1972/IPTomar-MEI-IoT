@@ -9,11 +9,11 @@ class SchoolsController < ApplicationController
 	end
 
 	def show
-		@school = School.find(params[:identification])
+		@school = School.find(params[:id])
 	end
 
 	def edit
-		@school = School.find(params[:identification])
+		@school = School.find(params[:id])
 	end
 
 	def create
@@ -27,7 +27,7 @@ class SchoolsController < ApplicationController
 	end
 
 	def update
-		@school = School.find(params[:identification])
+		@school = School.find(params[:id])
 
 		if @school.update(school_params)
 			# redirect to @school
@@ -37,7 +37,7 @@ class SchoolsController < ApplicationController
 	end
 
 	def destroy
-		@school = School.find(params[:identification])
+		@school = School.find(params[:id])
 		@school.destroy
 
 		# redirect_to schools_path
@@ -45,6 +45,6 @@ class SchoolsController < ApplicationController
 
 	private
 		def school_params
-			params.require(:school).permit(:identification, :descricao)
+			params.require(:school).permit(:id, :descricao)
 		end
 end

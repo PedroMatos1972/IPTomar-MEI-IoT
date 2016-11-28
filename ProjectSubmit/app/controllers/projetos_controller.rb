@@ -9,11 +9,11 @@ class ProjetosController < ApplicationController
 	end
 
 	def show
-		@projeto = Projeto.find(params[:identification])
+		@projeto = Projeto.find(params[:id])
 	end
 
 	def edit
-		@projeto = Projeto.find(params[:identification])
+		@projeto = Projeto.find(params[:id])
 	end
 
 	def create
@@ -27,7 +27,7 @@ class ProjetosController < ApplicationController
 	end
 
 	def update
-		@projeto = Projeto.find(params[:identification])
+		@projeto = Projeto.find(params[:id])
 
 		if @projeto.update(projeto_params)
 			# redirect to @projeto
@@ -37,7 +37,7 @@ class ProjetosController < ApplicationController
 	end
 
 	def destroy
-		@projeto = Projeto.find(params[:identification])
+		@projeto = Projeto.find(params[:id])
 		@projeto.destroy
 
 		# redirect_to projetos_path
@@ -45,6 +45,6 @@ class ProjetosController < ApplicationController
 
 	private
 		def projeto_params
-			params.require(:projeto).permit(:identification, :titulo, :resume, :tag, :date, :class, :school, :users, :file)
+			params.require(:projeto).permit(:id, :titulo, :resume, :tag, :date, :class, :school, :users, :file)
 		end
 end

@@ -8,11 +8,11 @@ class AulasController < ApplicationController
 	end
 
 	def show
-		@aula = Aula.find(params[:identification])
+		@aula = Aula.find(params[:id])
 	end
 
 	def edit
-		@aula = Aula.find(params[:identification])
+		@aula = Aula.find(params[:id])
 	end
 
 	def create
@@ -26,7 +26,7 @@ class AulasController < ApplicationController
 	end
 
 	def update
-		@aula = Aula.find(params[:identification])
+		@aula = Aula.find(params[:id])
 
 		if @aula.update(aula_params)
 			# redirect to @aula
@@ -36,7 +36,7 @@ class AulasController < ApplicationController
 	end
 
 	def destroy
-		@aula = Aula.find(params[:identification])
+		@aula = Aula.find(params[:id])
 		@aula.destroy
 
 		# redirect_to aulas_path
@@ -44,6 +44,6 @@ class AulasController < ApplicationController
 
 	private
 		def aula_params
-			params.require(:aula).permit(:identification, :descricao)
+			params.require(:aula).permit(:id, :descricao)
 		end
 end

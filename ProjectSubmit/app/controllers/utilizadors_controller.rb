@@ -8,11 +8,11 @@ class UtilizadorsController < ApplicationController
 	end
 
 	def show
-		@utilizador = Utilizador.find(params[:identification])
+		@utilizador = Utilizador.find(params[:id])
 	end
 
 	def edit
-		@utilizador = Utilizador.find(params[:identification])
+		@utilizador = Utilizador.find(params[:id])
 	end
 
 	def create
@@ -26,7 +26,7 @@ class UtilizadorsController < ApplicationController
 	end
 
 	def update
-		@utilizador = Utilizador.find(params[:identification])
+		@utilizador = Utilizador.find(params[:id])
 
 		if @utilizador.update(utilizador_params)
 			# redirect to @utilizador
@@ -36,7 +36,7 @@ class UtilizadorsController < ApplicationController
 	end
 
 	def destroy
-		@utilizador = Utilizador.find(params[:identification])
+		@utilizador = Utilizador.find(params[:id])
 		@utilizador.destroy
 
 		# redirect_to utilizadors_path
@@ -44,6 +44,6 @@ class UtilizadorsController < ApplicationController
 
 	private
 		def utilizador_params
-			params.require(:utilizador).permit(:identification, :name, :email, :type, :photo)
+			params.require(:utilizador).permit(:id, :name, :email, :type, :photo)
 		end
 end

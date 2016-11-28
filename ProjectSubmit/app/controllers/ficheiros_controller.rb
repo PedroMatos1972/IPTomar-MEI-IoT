@@ -8,11 +8,11 @@ class FicheirosController < ApplicationController
 	end
 
 	def show
-		@ficheiro = Ficheiro.find(params[:identification])
+		@ficheiro = Ficheiro.find(params[:id])
 	end
 
 	def edit
-		@ficheiro = Ficheiro.find(params[:identification])
+		@ficheiro = Ficheiro.find(params[:id])
 	end
 
 	def create
@@ -26,7 +26,7 @@ class FicheirosController < ApplicationController
 	end
 
 	def update
-		@ficheiro = Ficheiro.find(params[:identification])
+		@ficheiro = Ficheiro.find(params[:id])
 
 		if @ficheiro.update(ficheiro_params)
 			# redirect to @ficheiro
@@ -36,7 +36,7 @@ class FicheirosController < ApplicationController
 	end
 
 	def destroy
-		@ficheiro = Ficheiro.find(params[:identification])
+		@ficheiro = Ficheiro.find(params[:id])
 		@ficheiro.destroy
 
 		# redirect_to ficheiros_path
@@ -44,6 +44,6 @@ class FicheirosController < ApplicationController
 
 	private
 		def ficheiro_params
-			params.require(:ficheiro).permit(:identification, :descricao, :date, :local)
+			params.require(:ficheiro).permit(:id, :descricao, :date, :local)
 		end
 end

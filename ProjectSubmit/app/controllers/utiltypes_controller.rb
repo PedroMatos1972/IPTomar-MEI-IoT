@@ -8,11 +8,11 @@ class UtiltypesController < ApplicationController
 	end
 
 	def show
-		@utiltype = Utiltype.find(params[:identification])
+		@utiltype = Utiltype.find(params[:id])
 	end
 
 	def edit
-		@utiltype = Utiltype.find(params[:identification])
+		@utiltype = Utiltype.find(params[:id])
 	end
 
 	def create
@@ -26,7 +26,7 @@ class UtiltypesController < ApplicationController
 	end
 
 	def update
-		@utiltype = Utiltype.find(params[:identification])
+		@utiltype = Utiltype.find(params[:id])
 
 		if @utiltype.update(utiltype_params)
 			# redirect to @utiltype
@@ -36,7 +36,7 @@ class UtiltypesController < ApplicationController
 	end
 
 	def destroy
-		@utiltype = Utiltype.find(params[:identification])
+		@utiltype = Utiltype.find(params[:id])
 		@utiltype.destroy
 
 		# redirect_to utiltypes_path
@@ -44,6 +44,6 @@ class UtiltypesController < ApplicationController
 
 	private
 		def utiltype_params
-			params.require(:utiltype).permit(:identification, :descricao)
+			params.require(:utiltype).permit(:id, :descricao)
 		end
 end
